@@ -52,10 +52,24 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:Paul Samson.S
+RegisterNumber:212222230104
+module half(a,b,sum,carry,D,Bo);
+input a,b;
+output sum,carry,D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+xor(sum,a,b);//TYPE HERE THE COMMAND FOR SUM GENERATION IN GATE LEVEL MODELLING
+and(carry,a,b);//TYPE HERE THE COMMAND FOR CARRY GENERATION IN GATE LEVEL MODELLING
+wire abar;
+not(abar,a);
+xor(D,a,b);
+and(Bo,abar,b);//Type logic for half subtractor difference D,Borrow Bo using gate level modelling
+endmodule
 
 **RTL Schematic**
+![Screenshot 2024-03-23 110232](https://github.com/gokulprakash23013924/HALF_ADDER_SUBTRACTOR/assets/150231472/fbb25884-db13-4b92-869a-1079257a9236)
 
 **Output/TIMING Waveform**
+![Screenshot 2024-03-23 110155](https://github.com/gokulprakash23013924/HALF_ADDER_SUBTRACTOR/assets/150231472/3bbf6615-5ba4-4362-9a02-fc6861f3a8c5)
 
 **Result:**
+thus executed successfully
